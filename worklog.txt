@@ -42,11 +42,10 @@
   but it was a very small minor error that i think i can fix if i just tweak the desc prompt a little
 11. the extraction model is flaky without deep extract, so for iteration ill do it without deep extract, but for production ill turn deep extract on
 12. now i tried to make csvs and then use matplot lib to gen images... but then im like what if someone changes the values of the cell,
-then the image becomes redundant and the exec would have to contact the analyst again, so its better for me to make an excel that has
-formulas and can update the graphs as the values change in the cells
-
-
-
-
-todo:
-  - make sure deep extract is on for final presentation
+  then the image becomes redundant and the exec would have to contact the analyst again, so its better for me to make an excel that has
+  formulas and can update the graphs as the values change in the cells
+13. so finally i ended up with having claude code generate me a xlsx sheet directrly with some python libraries, had to iterateia few times to make
+  sure that that all the graphs had keys + labels
+14. decided not to make deep extract = true because that was uncessary for this demo, we can easily turn it on for future use. this is important to note
+  thought because in the presentation i say it took 40 seconds, which is true. but sometimes thats flaky. using deep extract would mean a stronger model
+  but at the cost of speed. something that we should talk about if asked about

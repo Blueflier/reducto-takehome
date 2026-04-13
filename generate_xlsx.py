@@ -76,7 +76,7 @@ def build_financials(wb, companies, fmts):
     ws = wb.add_worksheet("Financials")
     labels = list(companies.keys())
     ws.set_column(0, 0, 32)
-    ws.set_column(1, len(labels), 22)
+    ws.set_column(1, len(labels), 30)
 
     # Header
     r = 0
@@ -172,7 +172,7 @@ def build_financials(wb, companies, fmts):
 def build_segments(wb, companies, fmts):
     ws = wb.add_worksheet("Segments")
     ws.set_column(0, 0, 24)
-    ws.set_column(1, 6, 18)
+    ws.set_column(1, 6, 20)
 
     r = 0
     for label, info in companies.items():
@@ -218,8 +218,8 @@ def build_segments(wb, companies, fmts):
             "data_labels": {"percentage": True, "category": True, "num_format": "$#,##0", "font": {"size": 9}, "separator": "\n"},
         })
         pie.set_title({"name": f"{label} Revenue Mix ($M)"})
-        pie.set_size({"width": 450, "height": 320})
-        pie.set_legend({"none": True})
+        pie.set_size({"width": 500, "height": 350})
+        pie.set_legend({"position": "right"})
 
         # Bar chart for segment operating margin
         bar = wb.add_chart({"type": "bar"})
@@ -247,7 +247,7 @@ def build_cash_flow(wb, companies, fmts):
     ws = wb.add_worksheet("Cash Flow")
     labels = list(companies.keys())
     ws.set_column(0, 0, 36)
-    ws.set_column(1, len(labels), 22)
+    ws.set_column(1, len(labels), 30)
 
     r = 0
     ws.write(r, 0, "Metric ($M)", fmts["header"])
@@ -378,7 +378,7 @@ def build_guidance(wb, companies, fmts):
     ws = wb.add_worksheet("Guidance")
     labels = list(companies.keys())
     ws.set_column(0, 0, 28)
-    ws.set_column(1, len(labels), 22)
+    ws.set_column(1, len(labels), 30)
 
     r = 0
     ws.write(r, 0, "Metric", fmts["header"])
@@ -450,7 +450,7 @@ def build_guidance(wb, companies, fmts):
         chart.set_x_axis({"num_format": "$#,##0"})
         chart.set_style(10)
         chart.set_size({"width": 520, "height": 280})
-        chart.set_legend({"none": True})
+        chart.set_legend({"position": "bottom"})
         ws.insert_chart("E2", chart)
 
     return ws
@@ -460,7 +460,7 @@ def build_notes(wb, companies, fmts):
     ws = wb.add_worksheet("Notes")
     labels = list(companies.keys())
     ws.set_column(0, 0, 32)
-    ws.set_column(1, len(labels), 22)
+    ws.set_column(1, len(labels), 30)
 
     r = 0
     ws.write(r, 0, "Metric", fmts["header"])
@@ -522,7 +522,7 @@ def main():
     version = sys.argv[1] if len(sys.argv) > 1 else "v8"
     out_dir = ROOT / "sheets" / version
     out_dir.mkdir(parents=True, exist_ok=True)
-    out_path = out_dir / "report.xlsx"
+    out_path = out_dir / "Portfolio Extraction with Reducto AI.xlsx"
 
     companies = load_data(version)
     print(f"Generating {out_path.relative_to(ROOT)}")
