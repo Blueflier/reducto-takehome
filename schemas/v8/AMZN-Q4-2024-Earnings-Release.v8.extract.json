@@ -1,0 +1,113 @@
+{
+  "total_net_sales": {
+    "quarterly_sales": 187792,
+    "quarterly_prior_year_sales": 169961,
+    "quarterly_growth_pct": 10.489735861964,
+    "full_year_sales": 637959,
+    "full_year_prior_year_sales": 574785,
+    "full_year_growth_pct": 10.986792452830189
+  },
+  "operating_income": {
+    "quarterly_operating_income": 21203,
+    "quarterly_operating_margin_pct": 11.288679245283019,
+    "full_year_operating_income": 68593,
+    "full_year_operating_margin_pct": 10.750679245283019
+  },
+  "net_income_and_eps": {
+    "quarterly_net_income": 20004,
+    "quarterly_eps_basic": 1.9,
+    "quarterly_eps_diluted": 1.86,
+    "full_year_net_income": 59248,
+    "full_year_eps_basic": 5.66,
+    "full_year_eps_diluted": 5.53
+  },
+  "cash_flow": {
+    "operating_cash_flow": 115877,
+    "free_cash_flow": 38219
+  },
+  "capex": {
+    "total_capex": 82999
+  },
+  "segments": [
+    {
+      "segment_name": "North America",
+      "quarterly_net_sales": 115586,
+      "quarterly_prior_year_net_sales": 105514,
+      "quarterly_yoy_growth_pct": 9.554679354679354,
+      "quarterly_operating_income": 9256,
+      "quarterly_operating_margin_pct": 8.00778816199377,
+      "revenue_mix_pct": 61.53333333333333
+    },
+    {
+      "segment_name": "International",
+      "quarterly_net_sales": 43420,
+      "quarterly_prior_year_net_sales": 40243,
+      "quarterly_yoy_growth_pct": 7.896646174799,
+      "quarterly_operating_income": 1315,
+      "quarterly_operating_margin_pct": 3.027947598253275,
+      "revenue_mix_pct": 23.116666666666667
+    },
+    {
+      "segment_name": "AWS",
+      "quarterly_net_sales": 28786,
+      "quarterly_prior_year_net_sales": 24204,
+      "quarterly_yoy_growth_pct": 18.965289114521,
+      "quarterly_operating_income": 10632,
+      "quarterly_operating_margin_pct": 36.93693693693694,
+      "revenue_mix_pct": 15.333333333333334
+    }
+  ],
+  "cash_flow_and_liquidity": {
+    "capital_expenditures": {
+      "purchases_of_property_and_equipment": 82999,
+      "finance_lease_additions": 854,
+      "proceeds_from_asset_sales": 5341
+    },
+    "debt_repayments": {
+      "long_term_debt_repayments": 9182,
+      "short_term_debt_repayments": 5060
+    },
+    "lease_obligations": {
+      "finance_lease_principal_repayments": 2043,
+      "operating_lease_payments": 12341
+    },
+    "liquidity": {
+      "cash_and_equivalents": 78779,
+      "current_marketable_securities": 22423,
+      "non_current_marketable_securities": 0,
+      "total_debt": 52623
+    }
+  },
+  "forward_guidance": {
+    "has_guidance": true,
+    "guidance_period": "Q1 2025",
+    "revenue_low": 151000,
+    "revenue_high": 155500,
+    "revenue_growth_low_pct": 5,
+    "revenue_growth_high_pct": 9,
+    "operating_income_low": 14000,
+    "operating_income_high": 18000,
+    "fx_impact_amount": 2100,
+    "fx_impact_bps": 150
+  },
+  "key_business_metrics": {
+    "stock_based_compensation": {
+      "quarterly_sbc": 4995,
+      "quarterly_prior_year_sbc": 6319,
+      "full_year_sbc": 22011,
+      "full_year_prior_year_sbc": 24023
+    },
+    "operational_kpis": [
+      {
+        "metric_name": "WW shipping costs",
+        "current_value": "$28,549M",
+        "yoy_change": "4%"
+      },
+      {
+        "metric_name": "Employees (full-time and part-time; excludes contractors & temporary personnel)",
+        "current_value": "1,556,000",
+        "yoy_change": "2%"
+      }
+    ]
+  }
+}

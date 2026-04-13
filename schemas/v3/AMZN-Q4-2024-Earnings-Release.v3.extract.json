@@ -1,0 +1,32 @@
+{
+  "total_net_sales": {
+    "quarterly_sales": 187792,
+    "quarterly_prior_year_sales": 169961,
+    "quarterly_growth_pct": 10,
+    "full_year_sales": 637959,
+    "full_year_prior_year_sales": 574785,
+    "full_year_growth_pct": 11
+  },
+  "operating_income": {
+    "quarterly_operating_income": 21203,
+    "quarterly_operating_margin_pct": 11.3,
+    "full_year_operating_income": 68593,
+    "full_year_operating_margin_pct": 10.8
+  },
+  "net_income_and_eps": {
+    "quarterly_net_income": 20004,
+    "quarterly_eps_basic": 1.9,
+    "quarterly_eps_diluted": 1.86,
+    "full_year_net_income": 59248,
+    "full_year_eps_basic": 5.66,
+    "full_year_eps_diluted": 5.53
+  },
+  "cash_flow": {
+    "operating_cash_flow": 115877,
+    "free_cash_flow": 38219
+  },
+  "capex": {
+    "total_capex": 82999,
+    "major_investments": "Amazon announced several major investments in AWS, including the introduction of the Trainium2 AI chip, new foundation models in Amazon Nova, and various new features in Amazon Bedrock and SageMaker. Additionally, Amazon launched new AWS regions in Asia Pacific (Thailand) and Mexico (Central)."
+  }
+}

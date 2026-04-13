@@ -1,0 +1,6 @@
+.env
+sourcedata/
+parseddata/
+looking_for.md
+__pycache__
+.pytest_cache

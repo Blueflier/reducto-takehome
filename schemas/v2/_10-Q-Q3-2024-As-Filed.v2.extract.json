@@ -1,0 +1,32 @@
+{
+  "total_net_sales": {
+    "quarterly_sales": 85777,
+    "quarterly_prior_year_sales": 81797,
+    "quarterly_growth_pct": 4.85,
+    "full_year_sales": 296105,
+    "full_year_prior_year_sales": 293787,
+    "full_year_growth_pct": 0.79
+  },
+  "operating_income": {
+    "quarterly_operating_income": 25352,
+    "quarterly_operating_margin_pct": 29.56,
+    "full_year_operating_income": 93625,
+    "full_year_operating_margin_pct": 31.62
+  },
+  "net_income_and_eps": {
+    "quarterly_net_income": 21448,
+    "quarterly_eps_basic": 1.4,
+    "quarterly_eps_diluted": 1.4,
+    "full_year_net_income": 79000,
+    "full_year_eps_basic": 5.13,
+    "full_year_eps_diluted": 5.11
+  },
+  "cash_flow": {
+    "operating_cash_flow": 91443,
+    "free_cash_flow": 84904
+  },
+  "capex": {
+    "total_capex": 6539,
+    "major_investments": "The Company utilizes several outsourcing partners to manufacture subassemblies for the Company\u2019s products and to perform final assembly and testing of finished products. The Company also obtains individual components for its products from a wide variety of individual suppliers. As of June 29, 2024, the Company had manufacturing purchase obligations of $38.4 billion, with $38.3 billion payable within 12 months."
+  }
+}

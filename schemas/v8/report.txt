@@ -1,0 +1,127 @@
+Extraction Report — v8
+============================================================
+
+============================================================
+  AMZN-Q4-2024-Earnings-Release.pdf
+============================================================
+  total_net_sales:
+    quarterly_sales: 187,792
+    quarterly_prior_year_sales: 169,961
+    quarterly_growth_pct: 10.49%
+    full_year_sales: 637,959
+    full_year_prior_year_sales: 574,785
+    full_year_growth_pct: 10.99%
+  operating_income:
+    quarterly_operating_income: 21,203
+    quarterly_operating_margin_pct: 11.29%
+    full_year_operating_income: 68,593
+    full_year_operating_margin_pct: 10.75%
+  net_income_and_eps:
+    quarterly_net_income: 20,004
+    quarterly_eps_basic: 1.90
+    quarterly_eps_diluted: 1.86
+    full_year_net_income: 59,248
+    full_year_eps_basic: 5.66
+    full_year_eps_diluted: 5.53
+  cash_flow:
+    operating_cash_flow: 115,877
+    free_cash_flow: 38,219
+  capex:
+    total_capex: 82,999
+  segments:
+    -- North America --
+      quarterly_net_sales: 115,586
+      quarterly_prior_year_net_sales: 105,514
+      quarterly_yoy_growth_pct: 9.55%
+      quarterly_operating_income: 9,256
+      quarterly_operating_margin_pct: 8.01%
+      revenue_mix_pct: 61.53%
+    -- International --
+      quarterly_net_sales: 43,420
+      quarterly_prior_year_net_sales: 40,243
+      quarterly_yoy_growth_pct: 7.90%
+      quarterly_operating_income: 1,315
+      quarterly_operating_margin_pct: 3.03%
+      revenue_mix_pct: 23.12%
+    -- AWS --
+      quarterly_net_sales: 28,786
+      quarterly_prior_year_net_sales: 24,204
+      quarterly_yoy_growth_pct: 18.97%
+      quarterly_operating_income: 10,632
+      quarterly_operating_margin_pct: 36.94%
+      revenue_mix_pct: 15.33%
+  forward_guidance:
+    has_guidance: Yes
+    guidance_period: Q1 2025
+    revenue_low: 151,000
+    revenue_high: 155,500
+    revenue_growth_low_pct: 5
+    revenue_growth_high_pct: 9
+    operating_income_low: 14,000
+    operating_income_high: 18,000
+    fx_impact_amount: 2,100
+    fx_impact_bps: 150
+
+============================================================
+  _10-Q-Q3-2024-As-Filed.pdf
+============================================================
+  total_net_sales:
+    quarterly_sales: 85,777
+    quarterly_prior_year_sales: 81,797
+    quarterly_growth_pct: 4.87%
+    full_year_sales: 296,105
+    full_year_prior_year_sales: 293,787
+    full_year_growth_pct: 0.79%
+  operating_income:
+    quarterly_operating_income: 25,352
+    quarterly_operating_margin_pct: 29.56%
+    full_year_operating_income: 93,625
+    full_year_operating_margin_pct: 31.62%
+  net_income_and_eps:
+    quarterly_net_income: 21,448
+    quarterly_eps_basic: 1.40
+    quarterly_eps_diluted: 1.40
+    full_year_net_income: 79,000
+    full_year_eps_basic: 5.13
+    full_year_eps_diluted: 5.11
+  cash_flow:
+    operating_cash_flow: 91,443
+    free_cash_flow: 84,904
+  capex:
+    total_capex: 6,539
+  segments:
+    -- Americas --
+      quarterly_net_sales: 37,678
+      quarterly_prior_year_net_sales: 35,383
+      quarterly_yoy_growth_pct: 6.49%
+      quarterly_operating_income: 15,209
+      quarterly_operating_margin_pct: 40.37%
+      revenue_mix_pct: 43.92%
+    -- Europe --
+      quarterly_net_sales: 21,884
+      quarterly_prior_year_net_sales: 20,205
+      quarterly_yoy_growth_pct: 8.30%
+      quarterly_operating_income: 9,170
+      quarterly_operating_margin_pct: 41.91%
+      revenue_mix_pct: 25.51%
+    -- Greater China --
+      quarterly_net_sales: 14,728
+      quarterly_prior_year_net_sales: 15,758
+      quarterly_yoy_growth_pct: -6.54%
+      quarterly_operating_income: 5,562
+      quarterly_operating_margin_pct: 37.76%
+      revenue_mix_pct: 17.17%
+    -- Japan --
+      quarterly_net_sales: 5,097
+      quarterly_prior_year_net_sales: 4,821
+      quarterly_yoy_growth_pct: 5.73%
+      quarterly_operating_income: 2,544
+      quarterly_operating_margin_pct: 49.91%
+      revenue_mix_pct: 5.94%
+    -- Rest of Asia Pacific --
+      quarterly_net_sales: 6,390
+      quarterly_prior_year_net_sales: 5,630
+      quarterly_yoy_growth_pct: 13.52%
+      quarterly_operating_income: 2,610
+      quarterly_operating_margin_pct: 40.88%
+      revenue_mix_pct: 7.46%

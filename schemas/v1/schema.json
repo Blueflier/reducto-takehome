@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "properties": {
+    "total_net_sales": {
+      "type": "object",
+      "description": "Total net sales/revenue figures",
+      "properties": {
+        "quarterly_sales": { "type": "number", "description": "Most recent quarter total net sales in millions USD" },
+        "quarterly_prior_year_sales": { "type": "number", "description": "Same quarter prior year total net sales in millions USD" },
+        "quarterly_growth_pct": { "type": "number", "description": "Year-over-year quarterly sales growth as a percentage" },
+        "full_year_sales": { "type": "number", "description": "Full fiscal year total net sales in millions USD" },
+        "full_year_prior_year_sales": { "type": "number", "description": "Prior fiscal year total net sales in millions USD" },
+        "full_year_growth_pct": { "type": "number", "description": "Year-over-year full year sales growth as a percentage" }
+      }
+    },
+    "operating_income": {
+      "type": "object",
+      "description": "Operating income and operating margin",
+      "properties": {
+        "quarterly_operating_income": { "type": "number", "description": "Most recent quarter operating income in millions USD" },
+        "quarterly_operating_margin_pct": { "type": "number", "description": "Most recent quarter operating income as a percentage of net sales" },
+        "full_year_operating_income": { "type": "number", "description": "Full fiscal year operating income in millions USD" },
+        "full_year_operating_margin_pct": { "type": "number", "description": "Full fiscal year operating income as a percentage of net sales" }
+      }
+    },
+    "net_income_and_eps": {
+      "type": "object",
+      "description": "Net income and earnings per share (basic and diluted)",
+      "properties": {
+        "quarterly_net_income": { "type": "number", "description": "Most recent quarter net income in millions USD" },
+        "quarterly_eps_basic": { "type": "number", "description": "Most recent quarter basic earnings per share in USD" },
+        "quarterly_eps_diluted": { "type": "number", "description": "Most recent quarter diluted earnings per share in USD" },
+        "full_year_net_income": { "type": "number", "description": "Full fiscal year net income in millions USD" },
+        "full_year_eps_basic": { "type": "number", "description": "Full fiscal year basic earnings per share in USD" },
+        "full_year_eps_diluted": { "type": "number", "description": "Full fiscal year diluted earnings per share in USD" }
+      }
+    },
+    "cash_flow": {
+      "type": "object",
+      "description": "Operating cash flow and free cash flow",
+      "properties": {
+        "operating_cash_flow": { "type": "number", "description": "Operating cash flow in millions USD (trailing twelve months or annual)" },
+        "free_cash_flow": { "type": "number", "description": "Free cash flow in millions USD (trailing twelve months or annual)" }
+      }
+    },
+    "capex": {
+      "type": "object",
+      "description": "Capital expenditures and major capital investment disclosures",
+      "properties": {
+        "total_capex": { "type": "number", "description": "Total capital expenditures including finance leases in millions USD" },
+        "major_investments": { "type": "string", "description": "Summary of major capital investment plans or disclosures mentioned in the document" }
+      }
+    }
+  }
+}

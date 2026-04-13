@@ -1,0 +1,32 @@
+{
+  "total_net_sales": {
+    "quarterly_sales": 187.8,
+    "quarterly_prior_year_sales": 170,
+    "quarterly_growth_pct": 10,
+    "full_year_sales": 638,
+    "full_year_prior_year_sales": 574.8,
+    "full_year_growth_pct": 11
+  },
+  "operating_income": {
+    "quarterly_operating_income": 21.2,
+    "quarterly_operating_margin_pct": 11.3,
+    "full_year_operating_income": 68.6,
+    "full_year_operating_margin_pct": 10.8
+  },
+  "net_income_and_eps": {
+    "quarterly_net_income": 20,
+    "quarterly_eps_basic": 1.9,
+    "quarterly_eps_diluted": 1.86,
+    "full_year_net_income": 59.2,
+    "full_year_eps_basic": 5.66,
+    "full_year_eps_diluted": 5.53
+  },
+  "cash_flow": {
+    "operating_cash_flow": 115.9,
+    "free_cash_flow": 38.2
+  },
+  "capex": {
+    "total_capex": 82.999,
+    "major_investments": "Investments in AWS infrastructure, including new AI chips and cloud services, and expansion of physical and online retail capabilities."
+  }
+}

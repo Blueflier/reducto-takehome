@@ -1,0 +1,112 @@
+{
+  "total_net_sales": {
+    "quarterly_sales": 85777,
+    "quarterly_prior_year_sales": 81797,
+    "quarterly_growth_pct": 4.853679792682926,
+    "full_year_sales": 296105,
+    "full_year_prior_year_sales": 293787,
+    "full_year_growth_pct": 0.7898852979826795
+  },
+  "operating_income": {
+    "quarterly_operating_income": 25352,
+    "quarterly_operating_margin_pct": 29.556679792682925,
+    "full_year_operating_income": 93625,
+    "full_year_operating_margin_pct": 31.62090529798268
+  },
+  "net_income_and_eps": {
+    "quarterly_net_income": 21448,
+    "quarterly_eps_basic": 1.4,
+    "quarterly_eps_diluted": 1.4,
+    "full_year_net_income": 79000,
+    "full_year_eps_basic": 5.13,
+    "full_year_eps_diluted": 5.11
+  },
+  "cash_flow": {
+    "operating_cash_flow": 91443,
+    "free_cash_flow": 84904
+  },
+  "capex": {
+    "total_capex": 6539,
+    "major_investments": "The Company utilizes several outsourcing partners to manufacture subassemblies for the Company\u2019s products and to perform final assembly and testing of finished products. The Company also obtains individual components for its products from a wide variety of individual suppliers. As of June 29, 2024, the Company had manufacturing purchase obligations of $38.4 billion, with $38.3 billion payable within 12 months."
+  },
+  "segments": [
+    {
+      "segment_name": "Americas",
+      "quarterly_net_sales": 37678,
+      "quarterly_prior_year_net_sales": 35383,
+      "quarterly_yoy_growth_pct": 6.493679792682927,
+      "quarterly_operating_income": 15209,
+      "quarterly_operating_margin_pct": 40.36415079268293,
+      "revenue_mix_pct": 43.92267979268293
+    },
+    {
+      "segment_name": "Europe",
+      "quarterly_net_sales": 21884,
+      "quarterly_prior_year_net_sales": 20205,
+      "quarterly_yoy_growth_pct": 8.297682926829268,
+      "quarterly_operating_income": 9170,
+      "quarterly_operating_margin_pct": 41.9052979826795,
+      "revenue_mix_pct": 25.50754716981132
+    },
+    {
+      "segment_name": "Greater China",
+      "quarterly_net_sales": 14728,
+      "quarterly_prior_year_net_sales": 15758,
+      "quarterly_yoy_growth_pct": -6.537735849056604,
+      "quarterly_operating_income": 5562,
+      "quarterly_operating_margin_pct": 37.75754716981132,
+      "revenue_mix_pct": 17.171698113207547
+    },
+    {
+      "segment_name": "Japan",
+      "quarterly_net_sales": 5097,
+      "quarterly_prior_year_net_sales": 4821,
+      "quarterly_yoy_growth_pct": 5.725057471264368,
+      "quarterly_operating_income": 2544,
+      "quarterly_operating_margin_pct": 49.9122641509434,
+      "revenue_mix_pct": 5.939622641509434
+    },
+    {
+      "segment_name": "Rest of Asia Pacific",
+      "quarterly_net_sales": 6390,
+      "quarterly_prior_year_net_sales": 5630,
+      "quarterly_yoy_growth_pct": 13.51599173553719,
+      "quarterly_operating_income": 2610,
+      "quarterly_operating_margin_pct": 40.87558620689655,
+      "revenue_mix_pct": 7.458490566037736
+    }
+  ],
+  "cash_flow_and_liquidity": {
+    "capital_expenditures": {
+      "purchases_of_property_and_equipment": 6539,
+      "finance_lease_additions": 0,
+      "proceeds_from_asset_sales": 0
+    },
+    "debt_repayments": {
+      "long_term_debt_repayments": 7400,
+      "short_term_debt_repayments": 2985
+    },
+    "lease_obligations": {
+      "finance_lease_principal_repayments": 0,
+      "operating_lease_payments": 0
+    },
+    "liquidity": {
+      "cash_and_equivalents": 25565,
+      "current_marketable_securities": 36236,
+      "non_current_marketable_securities": 91240,
+      "total_debt": 101304
+    }
+  },
+  "forward_guidance": {
+    "has_guidance": false,
+    "guidance_period": null,
+    "revenue_low": null,
+    "revenue_high": null,
+    "revenue_growth_low_pct": null,
+    "revenue_growth_high_pct": null,
+    "operating_income_low": null,
+    "operating_income_high": null,
+    "fx_impact_note": null,
+    "other_notes": null
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "total_net_sales": {
+    "quarterly_sales": 187792,
+    "quarterly_prior_year_sales": 169961,
+    "quarterly_growth_pct": 10.4912,
+    "full_year_sales": 637959,
+    "full_year_prior_year_sales": 574785,
+    "full_year_growth_pct": 10.9909
+  },
+  "operating_income": {
+    "quarterly_operating_income": 21203,
+    "quarterly_operating_margin_pct": 11.2907,
+    "full_year_operating_income": 68593,
+    "full_year_operating_margin_pct": 10.7519
+  },
+  "net_income_and_eps": {
+    "quarterly_net_income": 20004,
+    "quarterly_eps_basic": 1.9,
+    "quarterly_eps_diluted": 1.86,
+    "full_year_net_income": 59248,
+    "full_year_eps_basic": 5.66,
+    "full_year_eps_diluted": 5.53
+  },
+  "cash_flow": {
+    "operating_cash_flow": 115877,
+    "free_cash_flow": 38219
+  },
+  "capex": {
+    "total_capex": 82999,
+    "major_investments": "Amazon announced significant capital investments in AI infrastructure, including the launch of Trainium2 AI chips (EC2 Trn2 instances offering 30-40% better price-performance than GPU-based instances), Trainium2 UltraServers, and Project Rainier (a collaboration with Anthropic using hundreds of thousands of Trainium2 chips to build the world's largest AI compute cluster). Amazon also launched new AWS regions (AWS Asia Pacific Thailand and AWS Mexico Central) and continued expansion of data center and fulfillment infrastructure. Purchases of property and equipment for the full year 2024 were $82,999 million, up from $52,729 million in 2023, representing a 61% increase on a net basis (net of proceeds from sales and incentives, TTM capex was $77,658 million)."
+  },
+  "segments": [
+    {
+      "segment_name": "North America",
+      "quarterly_net_sales": 115586,
+      "quarterly_prior_year_net_sales": 105514,
+      "quarterly_yoy_growth_pct": 9.5457,
+      "quarterly_operating_income": 9256,
+      "quarterly_operating_margin_pct": 8.0079,
+      "revenue_mix_pct": 61.55
+    },
+    {
+      "segment_name": "International",
+      "quarterly_net_sales": 43420,
+      "quarterly_prior_year_net_sales": 40243,
+      "quarterly_yoy_growth_pct": 7.8945,
+      "quarterly_operating_income": 1315,
+      "quarterly_operating_margin_pct": 3.0286,
+      "revenue_mix_pct": 23.1213
+    },
+    {
+      "segment_name": "AWS",
+      "quarterly_net_sales": 28786,
+      "quarterly_prior_year_net_sales": 24204,
+      "quarterly_yoy_growth_pct": 18.9308,
+      "quarterly_operating_income": 10632,
+      "quarterly_operating_margin_pct": 36.9346,
+      "revenue_mix_pct": 15.3287
+    }
+  ]
+}

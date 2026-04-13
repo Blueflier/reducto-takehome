@@ -1,0 +1,128 @@
+{
+  "type": "object",
+  "properties": {
+    "total_net_sales": {
+      "type": "object",
+      "description": "Extract from the financial statements tables only, not from narrative or summary text",
+      "properties": {
+        "quarterly_sales": { "type": "number", "description": "Most recent quarter total net sales in millions, as reported in the Consolidated Statements of Operations table" },
+        "quarterly_prior_year_sales": { "type": "number", "description": "Same quarter prior year total net sales in millions, as reported in the Consolidated Statements of Operations table" },
+        "quarterly_growth_pct": { "type": "number", "description": "Year-over-year quarterly sales growth as a percentage, calculated precisely as (current - prior) / prior * 100 using the table values. Do not round." },
+        "full_year_sales": { "type": "number", "description": "Full fiscal year total net sales in millions, as reported in the Consolidated Statements of Operations table" },
+        "full_year_prior_year_sales": { "type": "number", "description": "Prior fiscal year total net sales in millions, as reported in the Consolidated Statements of Operations table" },
+        "full_year_growth_pct": { "type": "number", "description": "Year-over-year full year sales growth as a percentage, calculated precisely as (current - prior) / prior * 100 using the table values. Do not round." }
+      }
+    },
+    "operating_income": {
+      "type": "object",
+      "description": "Extract from the financial statements tables only, not from narrative or summary text",
+      "properties": {
+        "quarterly_operating_income": { "type": "number", "description": "Most recent quarter operating income in millions, from the Consolidated Statements of Operations table" },
+        "quarterly_operating_margin_pct": { "type": "number", "description": "Most recent quarter operating income divided by net sales as a percentage" },
+        "full_year_operating_income": { "type": "number", "description": "Full fiscal year operating income in millions, from the Consolidated Statements of Operations table" },
+        "full_year_operating_margin_pct": { "type": "number", "description": "Full fiscal year operating income divided by net sales as a percentage" }
+      }
+    },
+    "net_income_and_eps": {
+      "type": "object",
+      "description": "Extract from the financial statements tables only, not from narrative or summary text",
+      "properties": {
+        "quarterly_net_income": { "type": "number", "description": "Most recent quarter net income in millions, from the Consolidated Statements of Operations table" },
+        "quarterly_eps_basic": { "type": "number", "description": "Most recent quarter basic earnings per share in dollars, from the financial statements table" },
+        "quarterly_eps_diluted": { "type": "number", "description": "Most recent quarter diluted earnings per share in dollars, from the financial statements table" },
+        "full_year_net_income": { "type": "number", "description": "Full fiscal year net income in millions, from the Consolidated Statements of Operations table" },
+        "full_year_eps_basic": { "type": "number", "description": "Full fiscal year basic earnings per share in dollars, from the financial statements table" },
+        "full_year_eps_diluted": { "type": "number", "description": "Full fiscal year diluted earnings per share in dollars, from the financial statements table" }
+      }
+    },
+    "cash_flow": {
+      "type": "object",
+      "description": "Extract from the Consolidated Statements of Cash Flows table only",
+      "properties": {
+        "operating_cash_flow": { "type": "number", "description": "Net cash provided by operating activities in millions, from the Consolidated Statements of Cash Flows table" },
+        "free_cash_flow": { "type": "number", "description": "Free cash flow in millions, from the cash flow table or supplemental data table" }
+      }
+    },
+    "capex": {
+      "type": "object",
+      "description": "Extract from the financial statements tables and footnotes",
+      "properties": {
+        "total_capex": { "type": "number", "description": "Purchases of property and equipment in millions, from the Consolidated Statements of Cash Flows table. Use the absolute value of the line item labeled 'Purchases of property and equipment' or 'Payments for acquisition of property, plant and equipment'. Do not add finance leases or other items." },
+        "major_investments": { "type": "string", "description": "Summary of major capital investment plans or disclosures mentioned in the document" }
+      }
+    },
+    "segments": {
+      "type": "array",
+      "description": "Business segment breakdown from the Segment Information table. Each item is one reportable segment. Segments may be defined by business line (e.g. North America, AWS) or by geography (e.g. Americas, Europe) depending on the company.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "segment_name": { "type": "string", "description": "Name of the reportable segment exactly as it appears in the Segment Information table" },
+          "quarterly_net_sales": { "type": "number", "description": "Most recent quarter net sales for this segment in millions, from the segment table" },
+          "quarterly_prior_year_net_sales": { "type": "number", "description": "Same quarter prior year net sales for this segment in millions, from the segment table" },
+          "quarterly_yoy_growth_pct": { "type": "number", "description": "Year-over-year quarterly net sales growth for this segment as a percentage" },
+          "quarterly_operating_income": { "type": "number", "description": "Most recent quarter operating income for this segment in millions, from the segment table" },
+          "quarterly_operating_margin_pct": { "type": "number", "description": "Most recent quarter segment operating income divided by segment net sales as a percentage" },
+          "revenue_mix_pct": { "type": "number", "description": "This segment's most recent quarter net sales as a percentage of total consolidated net sales" }
+        }
+      }
+    },
+    "cash_flow_and_liquidity": {
+      "type": "object",
+      "description": "Detailed cash flow and liquidity data from the Consolidated Statements of Cash Flows and Balance Sheets tables",
+      "properties": {
+        "capital_expenditures": {
+          "type": "object",
+          "description": "Capital spending detail from the Consolidated Statements of Cash Flows table",
+          "properties": {
+            "purchases_of_property_and_equipment": { "type": "number", "description": "Absolute value of purchases of property and equipment (or payments for acquisition of property, plant and equipment) in millions, from the cash flow table" },
+            "finance_lease_additions": { "type": "number", "description": "Property and equipment acquired under finance leases in millions, from the cash flow table or supplemental section. Return 0 if not present." },
+            "proceeds_from_asset_sales": { "type": "number", "description": "Proceeds from property and equipment sales and incentives in millions, from the cash flow table. Return 0 if not present." }
+          }
+        },
+        "debt_repayments": {
+          "type": "object",
+          "description": "Debt repayment activity from the financing activities section of the Consolidated Statements of Cash Flows table",
+          "properties": {
+            "long_term_debt_repayments": { "type": "number", "description": "Absolute value of repayments of long-term debt or term debt in millions, from the cash flow table" },
+            "short_term_debt_repayments": { "type": "number", "description": "Absolute value of repayments of short-term debt or commercial paper in millions, from the cash flow table. Return 0 if not present." }
+          }
+        },
+        "lease_obligations": {
+          "type": "object",
+          "description": "Lease payment obligations from the Consolidated Statements of Cash Flows table",
+          "properties": {
+            "finance_lease_principal_repayments": { "type": "number", "description": "Absolute value of principal repayments of finance leases in millions, from the cash flow table. Return 0 if not present." },
+            "operating_lease_payments": { "type": "number", "description": "Cash paid for operating leases in millions, from the supplemental cash flow section. Return 0 if not present." }
+          }
+        },
+        "liquidity": {
+          "type": "object",
+          "description": "Available cash and securities from the Consolidated Balance Sheets table, using the most recent period",
+          "properties": {
+            "cash_and_equivalents": { "type": "number", "description": "Cash and cash equivalents in millions, from the most recent balance sheet date" },
+            "current_marketable_securities": { "type": "number", "description": "Current marketable securities in millions, from the most recent balance sheet. Return 0 if not listed separately." },
+            "non_current_marketable_securities": { "type": "number", "description": "Non-current or long-term marketable securities in millions, from the most recent balance sheet. Return 0 if not listed separately." },
+            "total_debt": { "type": "number", "description": "Total debt (sum of short-term and long-term debt, term debt, and commercial paper) in millions, from the most recent balance sheet" }
+          }
+        }
+      }
+    },
+    "forward_guidance": {
+      "type": "object",
+      "description": "Forward-looking quantitative guidance for future quarters, from the Financial Guidance or Outlook section of the document. If the document does not contain any forward guidance, set has_guidance to false and leave all other fields null.",
+      "properties": {
+        "has_guidance": { "type": "boolean", "description": "True if the document contains explicit quantitative forward guidance (e.g. revenue or operating income ranges for a future quarter). False if no guidance is provided." },
+        "guidance_period": { "type": "string", "description": "The future period the guidance refers to, e.g. 'Q1 2025' or 'FY 2025'. Null if no guidance." },
+        "revenue_low": { "type": "number", "description": "Low end of guided net sales/revenue range in millions. Null if no guidance. Note: if guidance is stated in billions, convert to millions." },
+        "revenue_high": { "type": "number", "description": "High end of guided net sales/revenue range in millions. Null if no guidance. Note: if guidance is stated in billions, convert to millions." },
+        "revenue_growth_low_pct": { "type": "number", "description": "Low end of guided revenue growth as a percentage. Null if not provided." },
+        "revenue_growth_high_pct": { "type": "number", "description": "High end of guided revenue growth as a percentage. Null if not provided." },
+        "operating_income_low": { "type": "number", "description": "Low end of guided operating income range in millions. Null if no guidance. Note: if guidance is stated in billions, convert to millions." },
+        "operating_income_high": { "type": "number", "description": "High end of guided operating income range in millions. Null if no guidance. Note: if guidance is stated in billions, convert to millions." },
+        "fx_impact_note": { "type": "string", "description": "Any stated expected foreign exchange impact on future results, quoted from the document. Null if not mentioned." },
+        "other_notes": { "type": "string", "description": "Any other notable forward-looking statements about margin changes, major planned investments, assumptions, or caveats. Null if none." }
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "properties": {
+    "total_net_sales": {
+      "type": "object",
+      "description": "Extract from the financial statements tables only, not from narrative or summary text",
+      "properties": {
+        "quarterly_sales": { "type": "number", "description": "Most recent quarter total net sales in millions, as reported in the Consolidated Statements of Operations table" },
+        "quarterly_prior_year_sales": { "type": "number", "description": "Same quarter prior year total net sales in millions, as reported in the Consolidated Statements of Operations table" },
+        "quarterly_growth_pct": { "type": "number", "description": "Year-over-year quarterly sales growth as a percentage, calculated from the table values" },
+        "full_year_sales": { "type": "number", "description": "Full fiscal year total net sales in millions, as reported in the Consolidated Statements of Operations table" },
+        "full_year_prior_year_sales": { "type": "number", "description": "Prior fiscal year total net sales in millions, as reported in the Consolidated Statements of Operations table" },
+        "full_year_growth_pct": { "type": "number", "description": "Year-over-year full year sales growth as a percentage, calculated from the table values" }
+      }
+    },
+    "operating_income": {
+      "type": "object",
+      "description": "Extract from the financial statements tables only, not from narrative or summary text",
+      "properties": {
+        "quarterly_operating_income": { "type": "number", "description": "Most recent quarter operating income in millions, from the Consolidated Statements of Operations table" },
+        "quarterly_operating_margin_pct": { "type": "number", "description": "Most recent quarter operating income divided by net sales as a percentage" },
+        "full_year_operating_income": { "type": "number", "description": "Full fiscal year operating income in millions, from the Consolidated Statements of Operations table" },
+        "full_year_operating_margin_pct": { "type": "number", "description": "Full fiscal year operating income divided by net sales as a percentage" }
+      }
+    },
+    "net_income_and_eps": {
+      "type": "object",
+      "description": "Extract from the financial statements tables only, not from narrative or summary text",
+      "properties": {
+        "quarterly_net_income": { "type": "number", "description": "Most recent quarter net income in millions, from the Consolidated Statements of Operations table" },
+        "quarterly_eps_basic": { "type": "number", "description": "Most recent quarter basic earnings per share in dollars, from the financial statements table" },
+        "quarterly_eps_diluted": { "type": "number", "description": "Most recent quarter diluted earnings per share in dollars, from the financial statements table" },
+        "full_year_net_income": { "type": "number", "description": "Full fiscal year net income in millions, from the Consolidated Statements of Operations table" },
+        "full_year_eps_basic": { "type": "number", "description": "Full fiscal year basic earnings per share in dollars, from the financial statements table" },
+        "full_year_eps_diluted": { "type": "number", "description": "Full fiscal year diluted earnings per share in dollars, from the financial statements table" }
+      }
+    },
+    "cash_flow": {
+      "type": "object",
+      "description": "Extract from the Consolidated Statements of Cash Flows table only",
+      "properties": {
+        "operating_cash_flow": { "type": "number", "description": "Net cash provided by operating activities in millions, from the Consolidated Statements of Cash Flows table" },
+        "free_cash_flow": { "type": "number", "description": "Free cash flow in millions, from the cash flow table or supplemental data table" }
+      }
+    },
+    "capex": {
+      "type": "object",
+      "description": "Extract from the financial statements tables and footnotes",
+      "properties": {
+        "total_capex": { "type": "number", "description": "Total capital expenditures including finance leases in millions, from the cash flow or supplemental data table" },
+        "major_investments": { "type": "string", "description": "Summary of major capital investment plans or disclosures mentioned in the document" }
+      }
+    }
+  }
+}

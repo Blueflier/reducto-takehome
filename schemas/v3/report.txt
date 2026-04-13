@@ -1,0 +1,56 @@
+Extraction Report — v3
+========================================
+
+--- AMZN-Q4-2024-Earnings-Release.pdf ---
+  [total_net_sales]
+         OK  quarterly_sales: 187792
+         OK  quarterly_prior_year_sales: 169961
+         OK  quarterly_growth_pct: 10
+         OK  full_year_sales: 637959
+         OK  full_year_prior_year_sales: 574785
+         OK  full_year_growth_pct: 11
+  [operating_income]
+         OK  quarterly_operating_income: 21203
+         OK  quarterly_operating_margin_pct: 11.3
+         OK  full_year_operating_income: 68593
+         OK  full_year_operating_margin_pct: 10.8
+  [net_income_and_eps]
+         OK  quarterly_net_income: 20004
+         OK  quarterly_eps_basic: 1.9
+         OK  quarterly_eps_diluted: 1.86
+         OK  full_year_net_income: 59248
+         OK  full_year_eps_basic: 5.66
+         OK  full_year_eps_diluted: 5.53
+  [cash_flow]
+         OK  operating_cash_flow: 115877
+         OK  free_cash_flow: 38219
+  [capex]
+         OK  total_capex: 82999
+         OK  major_investments: Amazon announced several major investments in AWS, including the introduction of the Trainium2 AI chip, new foundation models in Amazon Nova, and various new features in Amazon Bedrock and SageMaker. Additionally, Amazon launched new AWS regions in Asia Pacific (Thailand) and Mexico (Central).
+
+--- _10-Q-Q3-2024-As-Filed.pdf ---
+  [total_net_sales]
+         OK  quarterly_sales: 85777
+         OK  quarterly_prior_year_sales: 81797
+         OK  quarterly_growth_pct: 4.853
+         OK  full_year_sales: 296105
+         OK  full_year_prior_year_sales: 293787
+         OK  full_year_growth_pct: 0.789
+  [operating_income]
+         OK  quarterly_operating_income: 25352
+         OK  quarterly_operating_margin_pct: 29.56
+         OK  full_year_operating_income: 93625
+         OK  full_year_operating_margin_pct: 31.62
+  [net_income_and_eps]
+         OK  quarterly_net_income: 21448
+         OK  quarterly_eps_basic: 1.4
+         OK  quarterly_eps_diluted: 1.4
+         OK  full_year_net_income: 79000
+         OK  full_year_eps_basic: 5.13
+         OK  full_year_eps_diluted: 5.11
+  [cash_flow]
+         OK  operating_cash_flow: 91443
+         OK  free_cash_flow: 84904
+  [capex]
+         OK  total_capex: 6539
+         OK  major_investments: The Company utilizes several outsourcing partners to manufacture subassemblies for the Company’s products and to perform final assembly and testing of finished products. The Company also obtains individual components for its products from a wide variety of individual suppliers. As of June 29, 2024, the Company had manufacturing purchase obligations of $38.4 billion, with $38.3 billion payable within 12 months.

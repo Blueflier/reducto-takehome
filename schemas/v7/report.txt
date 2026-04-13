@@ -1,0 +1,146 @@
+Extraction Report — v7
+========================================
+
+--- AMZN-Q4-2024-Earnings-Release.pdf ---
+  [total_net_sales]
+         OK  quarterly_sales: 187792
+         OK  quarterly_prior_year_sales: 169961
+         OK  quarterly_growth_pct: 10.493558503973
+         OK  full_year_sales: 637959
+         OK  full_year_prior_year_sales: 574785
+         OK  full_year_growth_pct: 10.986679563646
+  [operating_income]
+         OK  quarterly_operating_income: 21203
+         OK  quarterly_operating_margin_pct: 11.288679563646
+         OK  full_year_operating_income: 68593
+         OK  full_year_operating_margin_pct: 10.750084563646
+  [net_income_and_eps]
+         OK  quarterly_net_income: 20004
+         OK  quarterly_eps_basic: 1.9
+         OK  quarterly_eps_diluted: 1.86
+         OK  full_year_net_income: 59248
+         OK  full_year_eps_basic: 5.66
+         OK  full_year_eps_diluted: 5.53
+  [cash_flow]
+         OK  operating_cash_flow: 115877
+         OK  free_cash_flow: 38219
+  [capex]
+         OK  total_capex: 82999
+         OK  major_investments: Amazon introduced new innovations in AWS, including the Trainium2 AI chip and Amazon Nova foundation models.
+  [segments]
+    -- North America --
+           OK  quarterly_net_sales: 115586
+           OK  quarterly_prior_year_net_sales: 105514
+           OK  quarterly_yoy_growth_pct: 9.563106796116505
+           OK  quarterly_operating_income: 9256
+           OK  quarterly_operating_margin_pct: 8.00778816199377
+           OK  revenue_mix_pct: 61.533
+    -- International --
+           OK  quarterly_net_sales: 43420
+           OK  quarterly_prior_year_net_sales: 40243
+           OK  quarterly_yoy_growth_pct: 7.896
+           OK  quarterly_operating_income: 1315
+           OK  quarterly_operating_margin_pct: 3.027
+           OK  revenue_mix_pct: 23.116
+    -- AWS --
+           OK  quarterly_net_sales: 28786
+           OK  quarterly_prior_year_net_sales: 24204
+           OK  quarterly_yoy_growth_pct: 18.964
+           OK  quarterly_operating_income: 10632
+           OK  quarterly_operating_margin_pct: 36.928
+           OK  revenue_mix_pct: 15.351
+  [cash_flow_and_liquidity]
+         OK  capital_expenditures: {'purchases_of_property_and_equipment': 82999, 'finance_lease_additions': 854, 'proceeds_from_asset_sales': 5341}
+         OK  debt_repayments: {'long_term_debt_repayments': 9182, 'short_term_debt_repayments': 5060}
+         OK  lease_obligations: {'finance_lease_principal_repayments': 2043, 'operating_lease_payments': 12341}
+         OK  liquidity: {'cash_and_equivalents': 78779, 'current_marketable_securities': 22423, 'non_current_marketable_securities': 0, 'total_debt': 52623}
+  [forward_guidance]
+         OK  has_guidance: True
+         OK  guidance_period: Q1 2025
+         OK  revenue_low: 151000
+         OK  revenue_high: 155500
+         OK  revenue_growth_low_pct: 5
+         OK  revenue_growth_high_pct: 9
+         OK  operating_income_low: 14000
+         OK  operating_income_high: 18000
+         OK  fx_impact_note: This guidance anticipates an unusually large, unfavorable impact of approximately $2.1 billion, or 150 basis points, from foreign exchange rates.
+         OK  other_notes: Guidance assumes no additional business acquisitions, restructurings, or legal settlements.
+
+--- _10-Q-Q3-2024-As-Filed.pdf ---
+  [total_net_sales]
+         OK  quarterly_sales: 85777
+         OK  quarterly_prior_year_sales: 81797
+         OK  quarterly_growth_pct: 4.853679792682926
+         OK  full_year_sales: 296105
+         OK  full_year_prior_year_sales: 293787
+         OK  full_year_growth_pct: 0.7898852979826795
+  [operating_income]
+         OK  quarterly_operating_income: 25352
+         OK  quarterly_operating_margin_pct: 29.556679792682925
+         OK  full_year_operating_income: 93625
+         OK  full_year_operating_margin_pct: 31.62090529798268
+  [net_income_and_eps]
+         OK  quarterly_net_income: 21448
+         OK  quarterly_eps_basic: 1.4
+         OK  quarterly_eps_diluted: 1.4
+         OK  full_year_net_income: 79000
+         OK  full_year_eps_basic: 5.13
+         OK  full_year_eps_diluted: 5.11
+  [cash_flow]
+         OK  operating_cash_flow: 91443
+         OK  free_cash_flow: 84904
+  [capex]
+         OK  total_capex: 6539
+         OK  major_investments: The Company utilizes several outsourcing partners to manufacture subassemblies for the Company’s products and to perform final assembly and testing of finished products. The Company also obtains individual components for its products from a wide variety of individual suppliers. As of June 29, 2024, the Company had manufacturing purchase obligations of $38.4 billion, with $38.3 billion payable within 12 months.
+  [segments]
+    -- Americas --
+           OK  quarterly_net_sales: 37678
+           OK  quarterly_prior_year_net_sales: 35383
+           OK  quarterly_yoy_growth_pct: 6.493679792682927
+           OK  quarterly_operating_income: 15209
+           OK  quarterly_operating_margin_pct: 40.36415079268293
+           OK  revenue_mix_pct: 43.92267979268293
+    -- Europe --
+           OK  quarterly_net_sales: 21884
+           OK  quarterly_prior_year_net_sales: 20205
+           OK  quarterly_yoy_growth_pct: 8.297682926829268
+           OK  quarterly_operating_income: 9170
+           OK  quarterly_operating_margin_pct: 41.9052979826795
+           OK  revenue_mix_pct: 25.50754716981132
+    -- Greater China --
+           OK  quarterly_net_sales: 14728
+           OK  quarterly_prior_year_net_sales: 15758
+           OK  quarterly_yoy_growth_pct: -6.537735849056604
+           OK  quarterly_operating_income: 5562
+           OK  quarterly_operating_margin_pct: 37.75754716981132
+           OK  revenue_mix_pct: 17.171698113207547
+    -- Japan --
+           OK  quarterly_net_sales: 5097
+           OK  quarterly_prior_year_net_sales: 4821
+           OK  quarterly_yoy_growth_pct: 5.725057471264368
+           OK  quarterly_operating_income: 2544
+           OK  quarterly_operating_margin_pct: 49.9122641509434
+           OK  revenue_mix_pct: 5.939622641509434
+    -- Rest of Asia Pacific --
+           OK  quarterly_net_sales: 6390
+           OK  quarterly_prior_year_net_sales: 5630
+           OK  quarterly_yoy_growth_pct: 13.51599173553719
+           OK  quarterly_operating_income: 2610
+           OK  quarterly_operating_margin_pct: 40.87558620689655
+           OK  revenue_mix_pct: 7.458490566037736
+  [cash_flow_and_liquidity]
+         OK  capital_expenditures: {'purchases_of_property_and_equipment': 6539, 'finance_lease_additions': 0, 'proceeds_from_asset_sales': 0}
+         OK  debt_repayments: {'long_term_debt_repayments': 7400, 'short_term_debt_repayments': 2985}
+         OK  lease_obligations: {'finance_lease_principal_repayments': 0, 'operating_lease_payments': 0}
+         OK  liquidity: {'cash_and_equivalents': 25565, 'current_marketable_securities': 36236, 'non_current_marketable_securities': 91240, 'total_debt': 101304}
+  [forward_guidance]
+    MISSING  has_guidance: False
+    MISSING  guidance_period: None
+    MISSING  revenue_low: None
+    MISSING  revenue_high: None
+    MISSING  revenue_growth_low_pct: None
+    MISSING  revenue_growth_high_pct: None
+    MISSING  operating_income_low: None
+    MISSING  operating_income_high: None
+    MISSING  fx_impact_note: None
+    MISSING  other_notes: None

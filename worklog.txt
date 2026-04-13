@@ -1,0 +1,52 @@
+1. read the api docs - realized the parse is super important for me to iterate on the extract schema
+2. ran this prompt: try the reducto cli https://docs.reducto.ai/cli. https://docs.reducto.ai/agent-guide. we want to
+    run parse once on both pdfs in this folder. then save the job id's so that we can run the
+    extract endpoint with different json schemas to get what we want. the two pdfs are
+  intentionally from different industries. That's because Reducto specializes in able in being able
+   to extract information that doesn't have to be hard coded. And just to test the first thing we
+  want to try to find is this. Total net sales and growth (quarterly and full year). What I want is
+   to have a folder called schemas and then we'll Subfolders like V1, V2, V3. Inside of the V1
+  folder we'll have the schema, as well as a simple TXT output that compares if we found the
+  information we were looking for or not. And I'll also upload a text file in the home directory of
+   this repo with the information that we're looking for, so that you can iterate on the prompt for
+   the schemas like v1, v2, v3, in order to figure out what's the perfect prompt or I guess schema
+  structure for the type of things we're looking for. Inside of looking_for.md, I just put five
+  things that we're looking for from these two PDFs. But what I want you to do now is first just
+  run the parse endpoint on both PDFs. Store the job ID so we can reuse them. So we don't have to
+  keep running that over and over again..
+  
+3. next thing i did was setup a schema folder to test out different schemas. i think we will have 
+  to iterate because the schema might pick up for 1 pdf but not the other, i also created an extract.py
+  script so that my agent doesnt need to take in uneeded context rot.
+4. now im comparing the output that reducto did with what the actual pdf shows. i notice that it grabbed
+  the net sales quarterly as expected: 187.8 BUT it didnt grab the billion after wards. even after adjusting the
+  schema to ignore the the summaries/text and in the description to say output in millions, it still
+  grabbed the rounded billions figure from the summary/narrative at the top.
+  The solution: the system prompt was most important, seemed like this was the best so far:
+  schemas/v3/schema.json
+  Extract all values directly from the financial statements tables (e.g. Consolidated Statements of Operations, 
+  Consolidated Statements of Cash Flows). All monetary values must be reported in millions exactly as they appear 
+  in the tables. Do not round, convert, or summarize table values. For example, if a table shows 187,792 in a column 
+  labeled "(in millions)", return 187792, not 187.8.
+5. now that i have a working schema for Financial Overview, im moving onto segment level data. i notice that now
+  we are trying to test reducto's ability to find an array of data that isnt predefined and then find sub nested values
+  about that data (the sections like aws, NA, global) for amazon
+6. i realized that since we are going to be editing the schema a lot, and making lots of changes to maybe
+  even the system prompt,i should set up some sort of regression test just incase the stuff that was working suddenly breaks
+7. iread the docs somemore and i found that array extract is being depreciated, so then i switched over to deep extract which totally
+  solved the problem i had with the extract picking up the summary/prose at the top of the amazon file
+8. i had to learn about finance to understand what i  was extracting cause some things in segment level data were being mixed up with cash Flow
+  (capex on financial lease)
+9. adding the regression testing was a huge plus because section 3 was implmeneted with no hiccups
+10. i noticed that deep extract was taking a long time so i just decided to not use it at all., one of the tests failed (rounding extraction issue)
+  but it was a very small minor error that i think i can fix if i just tweak the desc prompt a little
+11. the extraction model is flaky without deep extract, so for iteration ill do it without deep extract, but for production ill turn deep extract on
+12. now i tried to make csvs and then use matplot lib to gen images... but then im like what if someone changes the values of the cell,
+then the image becomes redundant and the exec would have to contact the analyst again, so its better for me to make an excel that has
+formulas and can update the graphs as the values change in the cells
+
+
+
+
+todo:
+  - make sure deep extract is on for final presentation

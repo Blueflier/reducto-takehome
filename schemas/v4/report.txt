@@ -1,0 +1,114 @@
+Extraction Report — v4
+========================================
+
+--- AMZN-Q4-2024-Earnings-Release.pdf ---
+  [total_net_sales]
+         OK  quarterly_sales: 187792
+         OK  quarterly_prior_year_sales: 169961
+         OK  quarterly_growth_pct: 10.4912
+         OK  full_year_sales: 637959
+         OK  full_year_prior_year_sales: 574785
+         OK  full_year_growth_pct: 10.9909
+  [operating_income]
+         OK  quarterly_operating_income: 21203
+         OK  quarterly_operating_margin_pct: 11.2907
+         OK  full_year_operating_income: 68593
+         OK  full_year_operating_margin_pct: 10.7519
+  [net_income_and_eps]
+         OK  quarterly_net_income: 20004
+         OK  quarterly_eps_basic: 1.9
+         OK  quarterly_eps_diluted: 1.86
+         OK  full_year_net_income: 59248
+         OK  full_year_eps_basic: 5.66
+         OK  full_year_eps_diluted: 5.53
+  [cash_flow]
+         OK  operating_cash_flow: 115877
+         OK  free_cash_flow: 38219
+  [capex]
+         OK  total_capex: 82999
+         OK  major_investments: Amazon announced significant capital investments in AI infrastructure, including the launch of Trainium2 AI chips (EC2 Trn2 instances offering 30-40% better price-performance than GPU-based instances), Trainium2 UltraServers, and Project Rainier (a collaboration with Anthropic using hundreds of thousands of Trainium2 chips to build the world's largest AI compute cluster). Amazon also launched new AWS regions (AWS Asia Pacific Thailand and AWS Mexico Central) and continued expansion of data center and fulfillment infrastructure. Purchases of property and equipment for the full year 2024 were $82,999 million, up from $52,729 million in 2023, representing a 61% increase on a net basis (net of proceeds from sales and incentives, TTM capex was $77,658 million).
+  [segments]
+    -- North America --
+           OK  quarterly_net_sales: 115586
+           OK  quarterly_prior_year_net_sales: 105514
+           OK  quarterly_yoy_growth_pct: 9.5457
+           OK  quarterly_operating_income: 9256
+           OK  quarterly_operating_margin_pct: 8.0079
+           OK  revenue_mix_pct: 61.55
+    -- International --
+           OK  quarterly_net_sales: 43420
+           OK  quarterly_prior_year_net_sales: 40243
+           OK  quarterly_yoy_growth_pct: 7.8945
+           OK  quarterly_operating_income: 1315
+           OK  quarterly_operating_margin_pct: 3.0286
+           OK  revenue_mix_pct: 23.1213
+    -- AWS --
+           OK  quarterly_net_sales: 28786
+           OK  quarterly_prior_year_net_sales: 24204
+           OK  quarterly_yoy_growth_pct: 18.9308
+           OK  quarterly_operating_income: 10632
+           OK  quarterly_operating_margin_pct: 36.9346
+           OK  revenue_mix_pct: 15.3287
+
+--- _10-Q-Q3-2024-As-Filed.pdf ---
+  [total_net_sales]
+         OK  quarterly_sales: 85777
+         OK  quarterly_prior_year_sales: 81797
+         OK  quarterly_growth_pct: 4.8657
+         OK  full_year_sales: 296105
+         OK  full_year_prior_year_sales: 293787
+         OK  full_year_growth_pct: 0.789
+  [operating_income]
+         OK  quarterly_operating_income: 25352
+         OK  quarterly_operating_margin_pct: 29.5557
+         OK  full_year_operating_income: 93625
+         OK  full_year_operating_margin_pct: 31.6189
+  [net_income_and_eps]
+         OK  quarterly_net_income: 21448
+         OK  quarterly_eps_basic: 1.4
+         OK  quarterly_eps_diluted: 1.4
+         OK  full_year_net_income: 79000
+         OK  full_year_eps_basic: 5.13
+         OK  full_year_eps_diluted: 5.11
+  [cash_flow]
+         OK  operating_cash_flow: 91443
+         OK  free_cash_flow: 84904
+  [capex]
+         OK  total_capex: 6539
+         OK  major_investments: Apple had manufacturing purchase obligations of $38.4 billion as of June 29, 2024, with $38.3 billion payable within 12 months. The Company also had property, plant and equipment totaling $44,502 million net ($117,129 million gross). The Company continued its capital return program with authorized share repurchase programs.
+  [segments]
+    -- Americas --
+           OK  quarterly_net_sales: 37678
+           OK  quarterly_prior_year_net_sales: 35383
+           OK  quarterly_yoy_growth_pct: 6.4862
+           OK  quarterly_operating_income: 15209
+           OK  quarterly_operating_margin_pct: 40.3657
+           OK  revenue_mix_pct: 43.9255
+    -- Europe --
+           OK  quarterly_net_sales: 21884
+           OK  quarterly_prior_year_net_sales: 20205
+           OK  quarterly_yoy_growth_pct: 8.3098
+           OK  quarterly_operating_income: 9170
+           OK  quarterly_operating_margin_pct: 41.9028
+           OK  revenue_mix_pct: 25.5127
+    -- Greater China --
+           OK  quarterly_net_sales: 14728
+           OK  quarterly_prior_year_net_sales: 15758
+           OK  quarterly_yoy_growth_pct: -6.5364
+           OK  quarterly_operating_income: 5562
+           OK  quarterly_operating_margin_pct: 37.7648
+           OK  revenue_mix_pct: 17.1701
+    -- Japan --
+           OK  quarterly_net_sales: 5097
+           OK  quarterly_prior_year_net_sales: 4821
+           OK  quarterly_yoy_growth_pct: 5.725
+           OK  quarterly_operating_income: 2544
+           OK  quarterly_operating_margin_pct: 49.9117
+           OK  revenue_mix_pct: 5.9422
+    -- Rest of Asia Pacific --
+           OK  quarterly_net_sales: 6390
+           OK  quarterly_prior_year_net_sales: 5630
+           OK  quarterly_yoy_growth_pct: 13.4991
+           OK  quarterly_operating_income: 2610
+           OK  quarterly_operating_margin_pct: 40.8451
+           OK  revenue_mix_pct: 7.4495
