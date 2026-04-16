@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Extraction — Reducto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .top-bar {
+            width: 100%;
+            background: #9d17a0;
+            color: white;
+            text-align: center;
+            padding: 10px 16px;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+        }
+        .header {
+            width: 100%;
+            max-width: 720px;
+            padding: 32px 24px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo-img {
+            height: 32px;
+            width: auto;
+        }
+        .main {
+            max-width: 720px;
+            width: 100%;
+            padding: 48px 24px 64px;
+        }
+        h1 {
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+            letter-spacing: -0.025em;
+            line-height: 1.15;
+        }
+        .subtitle {
+            font-size: 16px;
+            color: #6b7280;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+        .drop-zone {
+            border: 2px dashed #d1d5db;
+            border-radius: 12px;
+            padding: 56px 24px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: #fafafa;
+        }
+        .drop-zone:hover, .drop-zone.dragover {
+            border-color: #9d17a0;
+            background: #faf5ff;
+        }
+        .drop-zone.has-files {
+            border-color: #9d17a0;
+            border-style: solid;
+            background: #faf5ff;
+        }
+        .drop-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+            opacity: 0.35;
+        }
+        .drop-text {
+            font-size: 15px;
+            color: #6b7280;
+        }
+        .drop-text strong {
+            color: #9d17a0;
+            cursor: pointer;
+        }
+        input[type="file"] { display: none; }
+        .file-list {
+            margin-top: 16px;
+            list-style: none;
+        }
+        .file-list li {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .file-list .remove {
+            background: none;
+            border: none;
+            color: #9ca3af;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 0 4px;
+            transition: color 0.15s;
+        }
+        .file-list .remove:hover { color: #ef4444; }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            margin-top: 24px;
+            background: #9d17a0;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .btn:hover { background: #7d1280; }
+        .btn:disabled {
+            background: #ce8bcf;
+            cursor: not-allowed;
+        }
+        .status {
+            margin-top: 16px;
+            text-align: center;
+            font-size: 14px;
+            color: #6b7280;
+            min-height: 20px;
+        }
+        .status.error { color: #ef4444; }
+        .status.success { color: #059669; }
+        .spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #e5e7eb;
+            border-top-color: #9d17a0;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .timer {
+            font-variant-numeric: tabular-nums;
+            color: #9ca3af;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">Structured document extraction powered by Reducto AI</div>
+
+    <div class="header">
+        <img src="/logo.jpg" alt="Reducto" class="logo-img">
+    </div>
+
+    <div class="main">
+        <h1>Portfolio Extraction</h1>
+        <p class="subtitle">Upload earnings PDFs to generate a formatted Excel report with structured document intelligence.</p>
+
+        <div class="drop-zone" id="dropZone">
+            <div class="drop-icon">&#128196;</div>
+            <div class="drop-text">
+                Drop PDF files here or <strong>click to browse</strong>
+            </div>
+            <input type="file" id="fileInput" multiple accept=".pdf">
+        </div>
+
+        <ul class="file-list" id="fileList"></ul>
+
+        <button class="btn" id="extractBtn" disabled>Extract & Download Excel</button>
+
+        <div class="status" id="status"></div>
+    </div>
+
+    <script>
+        const dropZone = document.getElementById('dropZone');
+        const fileInput = document.getElementById('fileInput');
+        const fileList = document.getElementById('fileList');
+        const extractBtn = document.getElementById('extractBtn');
+        const status = document.getElementById('status');
+        let files = [];
+
+        dropZone.addEventListener('click', () => fileInput.click());
+        dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('dragover'); });
+        dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
+        dropZone.addEventListener('drop', e => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            addFiles(e.dataTransfer.files);
+        });
+        fileInput.addEventListener('change', () => addFiles(fileInput.files));
+
+        function addFiles(newFiles) {
+            for (const f of newFiles) {
+                if (f.type === 'application/pdf' && !files.find(x => x.name === f.name)) {
+                    files.push(f);
+                }
+            }
+            renderFiles();
+        }
+
+        function removeFile(idx) {
+            files.splice(idx, 1);
+            renderFiles();
+        }
+
+        function renderFiles() {
+            fileList.innerHTML = files.map((f, i) =>
+                `<li>${f.name} <span style="color:#9ca3af">(${(f.size / 1024).toFixed(0)} KB)</span>
+                 <button class="remove" onclick="removeFile(${i})">&times;</button></li>`
+            ).join('');
+            extractBtn.disabled = files.length === 0;
+            dropZone.classList.toggle('has-files', files.length > 0);
+        }
+
+        extractBtn.addEventListener('click', async () => {
+            if (files.length === 0) return;
+
+            extractBtn.disabled = true;
+            status.className = 'status';
+
+            // Render spinner once; only update the timer text to avoid restarting the animation
+            status.innerHTML = `<span class="spinner"></span>Processing ${files.length} file${files.length > 1 ? 's' : ''}... <span class="timer">0s</span>`;
+            const timerSpan = status.querySelector('.timer');
+            const startTime = Date.now();
+            const timerInterval = setInterval(() => {
+                timerSpan.textContent = `${((Date.now() - startTime) / 1000).toFixed(0)}s`;
+            }, 100);
+
+            try {
+                // Fire each file as a separate API call in parallel
+                const promises = files.map(f => {
+                    const formData = new FormData();
+                    formData.append('file', f);
+                    return fetch('/extract-one', { method: 'POST', body: formData })
+                        .then(async res => {
+                            if (!res.ok) throw new Error(await res.text());
+                            return res.json();
+                        });
+                });
+
+                const results = await Promise.all(promises);
+
+                // Combine all results into one spreadsheet
+                const response = await fetch('/build-xlsx', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ companies: Object.assign({}, ...results) }),
+                });
+
+                clearInterval(timerInterval);
+
+                if (!response.ok) {
+                    const err = await response.text();
+                    throw new Error(err);
+                }
+
+                const blob = await response.blob();
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'Portfolio Extraction with Reducto AI.xlsx';
+                a.click();
+                URL.revokeObjectURL(url);
+
+                const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+                status.className = 'status success';
+                status.textContent = `Done in ${elapsed}s. Downloading...`;
+            } catch (err) {
+                clearInterval(timerInterval);
+                status.className = 'status error';
+                status.textContent = `Error: ${err.message}`;
+            }
+
+            extractBtn.disabled = false;
+        });
+    </script>
+</body>
+</html>
